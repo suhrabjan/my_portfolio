@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhrab Portfolio|Resume</title>
+    <link rel="stylesheet" href="{% static 'portfolio/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+    <div class="site-container">
+        <header class="site-header">
+            <hr class="initial-hr">
+            <div class="wrap-header">
+                <img class="profile-image" src="{% static 'portfolio/images/Untitled-4.png' %}" alt="front-end">
+                <div class="title-area">
+                    <h1 class="my-name">Suhrab Kurbanov</h1>
+                    <p class="description">Software Engineer / Web Developer</p>
+                    <div class="social-links">
+                        <ul>
+                            <li class="social-link-li"><a href="https://scholar.google.com/citations?user=OZvagzUAAAAJ&hl=en" target="_blank" class="fas fa-graduation-cap"></a></li>
+                            <li class="social-link-li"><a href="https://github.com/suhrabjan" target="_blank" class="fab fa-github"></a></li>
+                            <li class="social-link-li"><a href="https://plus.google.com/118107686741374691020" target="_blank" class="fab fa-google-plus"></a></li>
+                            <li class="social-link-li"><a href="https://www.linkedin.com/in/suhrab-kurbanov-95aa8046/" target="_blank" class="fab fa-linkedin"></a></li>
+                            <li class="social-link-li"><a href="https://twitter.com/sir_suhrab?lang=en" target="_blank" class="fab fa-twitter"></a></li>
+                            <li class="social-link-li"><a href="https://www.facebook.com/sir.suhrab" target="_blank" class="fab fa-facebook-square"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="download-cv">
+                    <a href="#">Download CV</a>
+                </div>
+            </div>
+        </header>
+        <nav id="drawer" class="site-navigation">
+            <div class="menu_bar"><a href="#" id="menu" class="fas fa-bars"></a></div>
+            <ul id="nav-drawer">
+                <li><a href="#">Front-End</a></li>
+                <li><a href="#">Back-End</a></li>
+                <li><a href="#">Data Science</a></li>
+                <li><a href="#">Machine Learning</a></li>
+            </ul>
+        </nav>
+        <main class="site-mainContent">
+            <section class="main-work">
+                <img src="images/table_700w.jpeg" srcset="images/table_500w.jpeg 500w, images/table_700w.jpeg 700w, images/table_1000w.jpeg 1000w, images/table_1500w.jpeg 1500w" alt="Office table">
+            </section>
+            <section class="projects">
+                <h2>Featured Work</h2>
+                <div class="project-grid">
+                    <ul class="project-list">
+                        <li>
+                            <div class="project-name p-1">
+                                <img src="images/front-end.jpg" alt="front-end">
+                                <div class="project-details">
+                                    <h3>Brighton Times</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sapiente?</p>
+                                    <button><a href="https://suhrabjan.github.io/">View Project</a></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="project-name p-2">
+                                <img src="images/java.jpg" alt="java programming">
+                                <div class="project-details">
+                                    <h3>Grid Autofit</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sapiente?</p>
+                                    <button><a href="https://suhrabjan.github.io/gridAutofit/">View Project</a></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="project-name p-3">
+                                <img src="images/python.jpg" alt="python programming">
+                                <div class="project-details">
+                                    <h3>Imega Resizer</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sapiente?</p>
+                                    <button><a href="https://github.com/suhrabjan/imageResizerForWeb">View Project</a></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <script>
+            var menu = document.querySelector('#menu');
+            var main = document.querySelector('main');
+            var header = document.querySelector('header')
+            var navDrawer = document.querySelector('#nav-drawer');
+
+            menu.addEventListener('click', function(e) {
+              navDrawer.classList.toggle('open');
+              e.stopPropagation();
+            });
+            main.addEventListener('click', function() {
+              navDrawer.classList.remove('open');
+            });
+            header.addEventListener('click', function() {
+              navDrawer.classList.remove('open');
+            });
+        </script>
+    </div>
+</body>
+</html>
